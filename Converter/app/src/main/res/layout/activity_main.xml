@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="334dp"
+        android:layout_height="243dp"
+        android:layout_marginBottom="19dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/buttons"
+                android:onClick="onNumberClick"
+                android:text="7" />
+
+            <Button
+                style="@style/buttons"
+                android:onClick="onNumberClick"
+                android:text="8" />
+
+            <Button
+                style="@style/buttons"
+                android:onClick="onNumberClick"
+                android:text="9" />
+
+            <Button
+                style="@style/buttons"
+                android:onClick="onNumberClick"
+                android:text="F" />
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onButtonEraseAllClick"
+                app:tint="@color/button"
+                app:srcCompat="@android:drawable/btn_dialog"
+                tools:layout_editor_absoluteX="310dp"
+                tools:layout_editor_absoluteY="203dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/buttons"
+                android:onClick="onNumberClick"
+                android:text="4" />
+
+            <Button
+                style="@style/buttons"
+                android:onClick="onNumberClick"
+                android:text="5" />
+
+            <Button
+                style="@style/buttons"
+                android:onClick="onNumberClick"
+                android:text="6" />
+
+            <Button
+                style="@style/buttons"
+                android:onClick="onNumberClick"
+                android:text="E" />
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onButtonEraseOneClick"
+                app:tint="@color/button"
+                app:srcCompat="@android:drawable/ic_input_delete"
+                tools:layout_editor_absoluteX="294dp"
+                tools:layout_editor_absoluteY="202dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/buttons"
+                android:onClick="onNumberClick"
+                android:text="1" />
+
+            <Button
+                style="@style/buttons"
+                android:onClick="onNumberClick"
+                android:text="2" />
+
+            <Button
+                style="@style/buttons"
+                android:onClick="onNumberClick"
+                android:text="3" />
+
+            <Button
+                style="@style/buttons"
+                android:onClick="onNumberClick"
+                android:text="D" />
+
+            <Button
+                style="@style/buttons"
+                android:onClick="onNumberClick"
+                android:text="-" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/buttons"
+                android:onClick="onNumberClick"
+                android:text="0" />
+
+            <Button
+                style="@style/buttons"
+                android:onClick="onNumberClick"
+                android:text="A" />
+
+            <Button
+                style="@style/buttons"
+                android:onClick="onNumberClick"
+                android:text="B" />
+
+            <Button
+                style="@style/buttons"
+                android:onClick="onNumberClick"
+                android:text="C" />
+
+            <Button
+                style="@style/buttons"
+                android:onClick="onButtonRavnoClick"
+                android:text="=" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text"
+        android:text="Результат"
+        android:textColor="@color/button"
+        android:textColorHint="@color/button"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.325" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/Bases"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.764"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="212dp"
+        android:entries="@array/Bases"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.262"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:rotationY="-180"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="292dp"
+        android:background="@drawable/text"
+        android:hint="Введите число"
+        android:textColor="@color/button"
+        android:textColorHint="@color/button"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <![CDATA[
+
+    android:layout_marginStart="12dp"
+    android:layout_marginLeft="12dp"
+    app:layout_constraintStart_toStartOf="@+id/textView2"
+    tools:layout_editor_absoluteY="239dp" />
+
+]]>
+</androidx.constraintlayout.widget.ConstraintLayout>
